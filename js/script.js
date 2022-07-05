@@ -32,10 +32,16 @@ const app = new Vue ({
     },
     methods: {
         goNext : function() {
-            this.active++
+            this.active++;
             if (this.active >= 5){
-                this.active = 0
+                this.active = 0;
             }
         },
+        goPrev : function() {
+            this.active--;
+            if (this.active < 0){
+                this.active = 4;
+            }
+        }
     }
 })
