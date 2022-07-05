@@ -34,7 +34,7 @@ const app = new Vue ({
         //aumenta l'indice dell'immagine attiva
         goNext : function() {
             this.active++;
-            if (this.active >= 5){
+            if (this.active >= this.images.length){
                 this.active = 0;
             }
         },
@@ -42,7 +42,7 @@ const app = new Vue ({
         goPrev : function() {
             this.active--;
             if (this.active < 0){
-                this.active = 4;
+                this.active = this.images.length - 1;
             }
         },
         //rende l'indice dell'immagine attiva uguale all'elemento clickato
