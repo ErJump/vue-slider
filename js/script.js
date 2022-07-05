@@ -42,6 +42,21 @@ const app = new Vue ({
             if (this.active < 0){
                 this.active = 4;
             }
-        }
+        },
+        goOn0: function(){
+            this.active=0;
+        },
+        goOn1: function(){
+            this.active=1;
+        },
+        goOn2: function(){
+            this.active=2;
+        },
+        goOn3: function(){
+            this.active=3;
+        },
+        goOn4: function(){
+            this.active=4;
+        },
     }
 })

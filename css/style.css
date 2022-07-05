@@ -39,6 +39,10 @@
     position: relative;
 }
 
+.thumb:hover {
+    cursor: pointer;
+}
+
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
