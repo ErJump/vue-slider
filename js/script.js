@@ -58,5 +58,12 @@ const app = new Vue ({
         goOn4: function(){
             this.active=4;
         },
-    }
+        autoplay: function (){
+            this.clock = setInterval(this.goNext, 3000);
+        }, 
+    },
+    mounted: function() {
+        this.autoplay();
+    },
+
 })
