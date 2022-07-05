@@ -31,18 +31,21 @@ const app = new Vue ({
         active : 0,      
     },
     methods: {
+        //aumenta l'indice dell'immagine attiva
         goNext : function() {
             this.active++;
             if (this.active >= 5){
                 this.active = 0;
             }
         },
+        //decresce l'indice dell'immagine attiva
         goPrev : function() {
             this.active--;
             if (this.active < 0){
                 this.active = 4;
             }
         },
+        //rende l'indice dell'immagine attiva uguale all'elemento clickato
         goOn0: function(){
             this.active=0;
         },
@@ -58,10 +61,16 @@ const app = new Vue ({
         goOn4: function(){
             this.active=4;
         },
+        //crea un intervallo di 3 secondi
         autoplay: function (){
             this.clock = setInterval(this.goNext, 3000);
         }, 
+        //blocca l'autoplay
+        stopAuto: function(){
+            clearInterval(this.clock)
+        },
     },
+    //inizia l'autoplay
     mounted: function() {
         this.autoplay();
     },
