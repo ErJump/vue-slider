@@ -30,4 +30,12 @@ const app = new Vue ({
         ], 
         active : 0,      
     },
+    methods: {
+        goNext : function() {
+            this.active++
+            if (this.active >= 5){
+                this.active = 0
+            }
+        },
+    }
 })
