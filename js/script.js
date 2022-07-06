@@ -46,7 +46,7 @@ const app = new Vue ({
             }
         },
         //rende l'indice dell'immagine attiva uguale all'elemento clickato
-        goOn0: function(){
+        /* goOn0: function(){
             this.active=0;
         },
         goOn1: function(){
@@ -60,13 +60,17 @@ const app = new Vue ({
         },
         goOn4: function(){
             this.active=4;
+        }, */
+        //rende active pari all'indice dell'immagine clickata
+        goOnIndex : function(index) {
+            this.active = index;
         },
         //crea un intervallo di 3 secondi
-        autoplay: function (){
+        autoplay: function () {
             this.clock = setInterval(this.goNext, 3000);
         }, 
         //blocca l'autoplay
-        stopAuto: function(){
+        stopAuto: function() {
             clearInterval(this.clock)
         },
     },

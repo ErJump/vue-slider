@@ -37,6 +37,7 @@
 .thumbs {
     float: left;
     height: 300px;
+    width: 200px;
     background: #000;
     position: relative;
 }
@@ -48,6 +49,8 @@
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .thumb img {
